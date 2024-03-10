@@ -14,9 +14,9 @@ application framework and finally I want to create a game engine on top of
 
 ## Progress
 
--[ ] 99 Problems
--[ ] Eliom
--[ ] Game Engine
+- [ ] 99 Problems
+- [ ] Eliom
+- [ ] Game Engine
 
 ## Resources
 

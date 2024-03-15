@@ -1,0 +1,13 @@
+Mar 14 23:29:27: ocsigen:main: Command pipe created
+Mar 14 23:29:27: ocsigen:ocsipersist:dbm: Initializing ...
+Mar 14 23:29:27: ocsigen:ocsipersist:dbm: Launching a new Ocsidbm process: ocsidbm on directory local/var/data/arid.
+Mar 14 23:29:28: ocsigen:ocsipersist:dbm: ...Initialization complete
+Mar 14 23:29:28: ocsigen:config: While parsing config file, tag <host>: No defaulthostname, assuming it is "localhost"
+Mar 15 00:17:02: ocsigen:ocsipersist:dbm: Initializing ...
+Mar 15 00:17:02: ocsigen:ocsipersist:dbm: Launching a new Ocsidbm process: ocsidbm on directory local/var/data/arid.
+Mar 15 00:17:03: ocsigen:ocsipersist:dbm: ...Initialization complete
+Mar 15 00:17:04: ocsigen:config: While parsing config file, tag <host>: No defaulthostname, assuming it is "localhost"
+Mar 15 00:17:21: ocsigen:ocsipersist:dbm: Initializing ...
+Mar 15 00:17:21: ocsigen:ocsipersist:dbm: Launching a new Ocsidbm process: ocsidbm on directory local/var/data/arid.
+Mar 15 00:17:22: ocsigen:ocsipersist:dbm: ...Initialization complete
+Mar 15 00:17:22: ocsigen:config: While parsing config file, tag <host>: No defaulthostname, assuming it is "localhost"

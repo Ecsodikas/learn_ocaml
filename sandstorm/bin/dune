@@ -1,0 +1,4 @@
+(executable
+ (public_name sandstorm)
+ (name main)
+ (libraries sandstorm))

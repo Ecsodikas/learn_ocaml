@@ -1,0 +1,32 @@
+(dirs tools client assets)
+
+(executables
+    (names arid)
+    (modes (byte plugin) (native plugin))
+    (libraries eliom.server ocsipersist.dbm)
+    (preprocess
+       (pps
+           lwt_ppx
+           pgocaml_ppx
+           js_of_ocaml-ppx_deriving_json
+           ocsigen-i18n
+           ocsigen-ppx-rpc --rpc-raw
+           eliom.ppx.server
+           -- --prefix Arid_ --suffix _i18n --default-module Arid_i18n
+       )
+    )
+  )
+
+(rule (target arid_i18n.eliom) (deps assets/arid_i18n.tsv)
+  (action
+    (with-stdout-to %{target}
+      (with-stdin-from %{deps}
+        (pipe-stdout
+          (run ocsigen-i18n-generator --languages en,fr --default-language fr %{deps})
+          (run sed "1 s/]/[@@deriving json]]\\n[%%shared [@@@ocaml.warning\"-27\"]]/"))))))
+
+(rule (alias arid)
+   (deps arid.cma client/arid.bc client/arid.bc.js tools/check_modules.ml)
+   (action (run ocaml tools/check_modules.ml arid)))
+
+(env (_ (flags (:standard -w -9-37-39))))
